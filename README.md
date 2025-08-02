@@ -72,8 +72,58 @@ To better analyze the frequency response of the analog front-end, the operationa
 
 Simulink Output
 The Simulink simulation confirms system-level behavior and time-domain signal
-d<img width="493" height="350" alt="image" src="https://github.com/user-attachments/assets/36c29a61-8c1f-46ec-98bd-d9ae5a88f504" />
-ynamics. 
+dynamics<img width="493" height="350" alt="image" src="https://github.com/user-attachments/assets/36c29a61-8c1f-46ec-98bd-d9ae5a88f504" />
+
+
+
+ 4. Current Mirror
+The circuit is used to copy the flow of current in one active device and controlling the flow of current in another device by maintaining the output current stable instead of loading
+
+
+<img width="931" height="394" alt="image" src="https://github.com/user-attachments/assets/cde52ead-6413-4132-a3c2-758ab694a16b" />
+
+
+high-Pass Filter Circuit
+This section explains the working and transfer function of a high-pass filter using an op-amp.
+<img width="1080" height="630" alt="image" src="https://github.com/user-attachments/assets/8f525803-68dc-4ecd-bec3-93e7b451ef45" />
+
+High-Pass Filter Circuit
+🧰 Circuit Overview
+Input Capacitor C_i = 4.7μF: Blocks DC
+Resistors R_i = R_f = 5kΩ: Define gain and cutoff
+Op-Amp in non-inverting configuration
+🧮 S-Domain Transfer Function
+H(s) = (Rf * s * Ci) / (1 + s * Ri * Ci)
+
+At low frequencies → H(s) → 0 (attenuates low freq)
+At high frequencies → H(s) → 1 (passes high freq)
+🔻 Cutoff Frequency (fc)
+fc = 1 / (2πRiCi) ≈ 6.77 Hz For Ri = 5kΩ, Ci = 4.7μF
+
+🖼️ Op-Amp Schematic Diagram
+Detailed internal schematic of the operational amplifier:
+<img width="941" height="451" alt="image" src="https://github.com/user-attachments/assets/3632824a-8470-4881-bbf8-7bbcf2c4cbbb" />
+Op-Amp Symbolic Diagram
+Standard symbolic representation of an operational amplifier:
+<img width="1015" height="667" alt="image" src="https://github.com/user-attachments/assets/44112f46-b39a-46b1-8e5d-a6be2d4df3d2" />
+Opamp Symbol
+📐 High-Pass Filter Circuit Using the Op-Amp
+High-pass filter circuit built using the op-amp symbol shown above: High-Pass Circuit
+<img width="791" height="621" alt="image" src="https://github.com/user-attachments/assets/a8c04e17-b2c7-4b1f-94b4-d43bb1ca61dd" />
+Frequency Response Plot of the High-Pass Filter
+The plot below shows the frequency response (gain vs frequency) of the high-pass filter circuit. Frequency Response
+<img width="1411" height="508" alt="image" src="https://github.com/user-attachments/assets/47234eb4-f0d7-4a13-996a-437487d548ef" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
